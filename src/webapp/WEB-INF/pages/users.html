@@ -23,8 +23,13 @@
             <td th:utext="${user.getEmail()}"></td>
             <td>
                 <a th:href="@{/users/edit/{userId}(userId=${user.getId()})}">edit </a>
-                <a th:href="@{/users/delete/{userId}(userId=${user.getId()})}">delete</a>
+                <form th:method="DELETE" th:action="@{/users/delete/{userId}(userId=${user.getId()})}">
+                    <input type="submit" value="delete"/>
+                </form>
             </td>
+<!--            <form th:method="DELETE" th:action="@{/users/delete/{userId}(userId=${user.getId()})}">-->
+<!--                <input type="submit" value="delete"/>-->
+<!--            </form>-->
         </tr>
     </table>
 </div>

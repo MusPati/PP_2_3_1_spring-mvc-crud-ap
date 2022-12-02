@@ -48,6 +48,6 @@ public class UserDaoImpl implements UserDao{
         updatedUser.setFirstName(user.getFirstName());
         updatedUser.setLastName(user.getLastName());
         updatedUser.setEmail(user.getEmail());
-        entityManager.merge(updatedUser);
+        //entityManager.merge(updatedUser);
     }
 }
