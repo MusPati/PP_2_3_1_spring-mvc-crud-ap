@@ -4,8 +4,11 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import javax.servlet.DispatcherType;
+import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import java.util.EnumSet;
 import java.util.logging.Filter;
 
 public class AppInit extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -32,14 +35,13 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
         return new String[]{"/"};
     }
 
-
 //    @Override
-//    public void onStartup (ServletContext aServletContext) throws ServletException {
+//    public void onStartup(ServletContext aServletContext) throws ServletException {
 //        super.onStartup(aServletContext);
-//        registerHiddenFieldFilter (aServletContext);
+//        registerHiddenFieldFilter(aServletContext);
 //    }
 //
-//    private void registerHiddenFieldFilter (ServletContext aContext) {
+//    private void registerHiddenFieldFilter(ServletContext aContext) {
 //        aContext.addFilter("hiddenHttpMethodFilter",
 //                new HiddenHttpMethodFilter()).addMappingForUrlPatterns(null, true, "/*");
 //    }
