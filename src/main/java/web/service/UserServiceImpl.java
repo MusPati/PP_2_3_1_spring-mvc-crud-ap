@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     UserDao userDao;
 
@@ -50,7 +50,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public void updateUserInfo (int id, User user) {
+    public void updateUserInfo(int id, User user) {
         User userToBeUpdated = showUserById(id);
         userToBeUpdated.setFirstName(user.getFirstName());
         userToBeUpdated.setLastName(user.getLastName());

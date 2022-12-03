@@ -7,18 +7,18 @@
 </head>
 <body>
 
-<form th:method="POST" th:action="@{/users}" th:object="${user}" >
+<form th:method="POST" th:action="@{/users}" th:object="${user}">
     <table>
         <tr>
-            <td>First name: </td>
+            <td>First name:</td>
             <td><input type="text" th:field="*{firstName}" id="firstName" required placeholder="Имя"/></td>
         </tr>
         <tr>
-            <td>Last name: </td>
+            <td>Last name:</td>
             <td><input type="text" th:field="*{lastName}" id="lastName" required placeholder="Фамилия"/></td>
         </tr>
         <tr>
-            <td>Email: </td>
+            <td>Email:</td>
             <td><input type="text" th:field="*{email}" id="email" required placeholder="Email@mail.ru"/></td>
         </tr>
         <tr>
